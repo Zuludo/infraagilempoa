@@ -1,0 +1,8 @@
+---
+- name: configurando um servidor web
+   tasks:
+   - name: crinando minha pagina web
+     template:
+      src: index
+      dest: /var/www/html/index.html
+

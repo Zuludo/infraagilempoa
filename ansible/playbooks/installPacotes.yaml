@@ -1,0 +1,28 @@
+---
+- name: criando um servidor web
+  hosts: all
+  tasks:
+
+   - name: Instalando pacotes em comum
+     package:
+      name:
+       - vim
+       - htop
+       - cowsay
+       - figlet
+      state: present
+
+   - name: instalndo apache2
+     package:
+      name: apache2
+      state: present
+     when: ansible_os_family == "Debian"
+
+   - name: instalando httpd
+     package:
+      name:
+       - httpd
+       - epel-release
+
+      state: present
+     when: ansible_os_family == "RedHat"

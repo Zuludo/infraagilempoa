@@ -1,0 +1,12 @@
+---
+- name: instalando repositorio do centos 
+  yum:
+   name: https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm 
+   state: present
+#  when: ansible_os_family == "RedHat" and ansible_distribution major_version == "7" 
+
+- name: instalando repositorio do ubunto xenial
+  apt:
+   deb: https://apt.puppetlabs.com/puppet5-release-xenial.deb
+   state: present
+#  when: ansible_os_family == "Debian" and ansible_distribution major_version == "16"

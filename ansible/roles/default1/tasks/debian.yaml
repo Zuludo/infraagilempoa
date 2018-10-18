@@ -1,0 +1,7 @@
+---
+- name: pacotes padroes para maquina debian
+  package:
+   name: apache2
+   update_cache: yes
+   state: present
+  when: ansible_os_family == "Debian"

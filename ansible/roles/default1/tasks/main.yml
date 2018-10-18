@@ -1,0 +1,11 @@
+---
+# tasks file for default1
+
+- name: instala o apache no debian 
+  include: debian.yaml
+
+- name: instala o apache no Redhat
+  include: centos.yaml
+
+- name: configura o index
+  include: index.yaml

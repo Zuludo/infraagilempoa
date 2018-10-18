@@ -1,0 +1,14 @@
+---
+- name: configurando um servidor web
+  tasks:
+   - name: garantdindo o apache instalado
+     package:
+      name: apache2
+     when: ansible_os_family == "Debian"
+
+   - name: garantindo o apache instalado em redhat
+     package:
+      name: httpd
+     when: ansible_os_family == "RedHat"
+
+

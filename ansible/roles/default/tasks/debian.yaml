@@ -1,0 +1,11 @@
+---
+- name: pacotes padroes para maquina debian
+  package:
+   name:
+    - figlet
+    - cowsay
+    - htop
+    - sysstat
+   update_cache: yes
+   state: present
+  when: ansible_os_family == "Debian"

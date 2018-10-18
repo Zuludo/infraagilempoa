@@ -1,0 +1,5 @@
+- name: enviando o arquivo
+  template:
+   src: templates/index
+   dest: /var/www/html/index.html
+  notify: restart apache centos

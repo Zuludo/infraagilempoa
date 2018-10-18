@@ -1,0 +1,9 @@
+<marquee>
+<h1>
+{{time}} nao tem mundial
+<br>
+o hostname damaquina e {{ansible_hostname}}
+<br>
+A distro e {{ansible_os_family}}
+</h1>
+</marquee>
